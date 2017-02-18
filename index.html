@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Birchwood Estates West</title>
+    
+    <!-- Main CSS file -->
+        <!-- move style.css to the bottom. the bottom wins -->
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/styles/owl.carousel.css" />
+    <link rel="stylesheet" href="assets/styles/magnific-popup.css"/>
+    <!-- icons -->
+    <link rel="stylesheet" href="assets/styles/font-awesome.css" />
+    <link rel="stylesheet" href="assets/styles/responsive.css" />
+    <link rel="stylesheet" href="assets/styles/simple-sidebar.css" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/icon/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/icon/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/icon/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icon/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/icon/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" href="assets/styles/style.css" /> 
+</head>
+<body>
+
+
+ <!-- HEADER -->
+  
+
+    <div>
+        <div ui-view></div>
+    </div>
+
+    <!-- JS --> <!-- no two scripts should be the same. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+        <script type="text/javascript" src="assets/js/smoothscroll.js"></script><!-- Smooth Scroll -->
+        <script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script><!-- masonry -->
+        <script type="text/javascript" src="assets/js/jquery.fitvids.js"></script><!-- fitvids -->
+        <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script><!-- Owl-Carousel -->
+        <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script><!-- CounterUp -->
+        <script type="text/javascript" src="assets/js/waypoints.min.js"></script><!-- CounterUp -->
+        <script type="text/javascript" src="assets/js/jquery.isotope.min.js"></script><!-- isotope -->
+        <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script><!-- magnific-popup -->
+    
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script type="text/javascript">
+                (function(){
+                    emailjs.init("user_0XBGTmAiVLVuR2MGirqyv");
+                })();
+            </script>
+
+
+
+    <script src='lib/lodash.js'></script>
+    <script src='//maps.googleapis.com/maps/api/js?key=AIzaSyA6T0Nd98dx45sWJ0gMqxDKL2bnEEvo7nk'></script>
+
+    <!-- External Libs -->
+    <script src='node_modules/angular/angular.js'></script>
+    <script src='lib/angular-simple-logger.js'></script>
+    <script src='lib/googlemaps.js'></script>
+    <script src='lib/toArrayFilter.js'></script>
+    <script src='lib/ng-file-upload-shim.js'></script>
+    <script src='lib/ng-file-upload.js'></script>
+
+
+    <script src='node_modules/bootstrap/dist/js/bootstrap.js'></script>
+    <script src='node_modules/angular-route/angular-route.js'></script>
+    <script src='node_modules/angular-ui-router/release/angular-ui-router.js'></script>
+    <script src='node_modules/bootstrap/js/ui-bootstrap-tpls-2.2.0.min.js'></script>
+    <script src='node_modules/bootstrap/js/dropdown.js'></script>
+    <script src='node_modules/bootstrap/js/collapse.js'></script>
+
+    <!-- Modules and Config -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/landing/landingController.js"></script>
+
+    <script src="app/dashboard/profile/profileController.js"></script>
+    <script src="app/dashboard/community/communityController.js"></script>
+    <script src="app/dashboard/account/accountController.js"></script>
+
+    <!-- Directives -->
+    <script src="app/common/directives/directive.js"></script>
+
+    <!-- Services -->
+    <script src="app/common/services/service.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDSCXu8esxECHnAImamHddP4g28qpNIkd4",
+        authDomain: "test-d3cea.firebaseapp.com",
+        databaseURL: "https://test-d3cea.firebaseio.com",
+        storageBucket: "test-d3cea.appspot.com",
+        messagingSenderId: "376630577028"
+      };
+      firebase.initializeApp(config);
+    </script>        
+        
+
+</body>
+</html>

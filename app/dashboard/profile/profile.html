@@ -1,0 +1,171 @@
+<!-- profile picture -->
+<div class="container">
+  <div class="row">
+
+show firebase data on webpage
+        <pre>
+        {{profile | json}}
+        </pre> 
+
+        
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+
+              <div class="row">
+                <div class="panel-title col-md-8 col-lg-8"> {{profile.userInfo.resident1Name}}
+                </div>
+                Modal -->
+                <div class="col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3" style="text-align:right;">    <a data-toggle="modal" data-target="#profileModal">Edit</a>    
+                </div>
+              </div>
+
+            </div> <!-- /panel-heading -->
+
+
+
+
+
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" ng-src="{{avatarURL}}" class="img-circle img-responsive">  
+
+                <button type="file" style="color: #fff !important; background-color: #5cb85c !important; border-color: #4cae4c important;" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-height="10000" ngf-max-size="10MB" class="btn btn-success">Upload Avatar</button>
+
+                </div>
+                
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Lot #:</td>
+                        <td>{{profile.userInfo.lotNumber}}</td>
+                      </tr>
+                      <tr>
+                        <td>Move in date:</td>
+                        <td>{{profile.userInfo.moveInDate}}</td>
+                      </tr>
+                      <tr>
+                        <td>Resident Names:</td>
+                        <td>{{profile.userInfo.resident1Name}} <br>
+                        {{profile.userInfo.resident2Name}} <br>
+                        {{profile.userInfo.resident3Name}}</td>
+                      </tr>
+
+                      <tr>
+                        <td>Phone Number</td>
+                        <td>{{profile.userInfo.phoneNumber}} </td>
+                      </tr>  
+                      <tr>
+                        <td>Email</td>
+                        <td>{{profile.userInfo.email}} </td>
+                      </tr>                      
+                      <tr>
+                        <td>Secondary Address</td>
+                        <td>{{profile.userInfo.secondaryAddress}} </td>
+                      </tr>
+                    
+                      <tr>
+                        <td>Emergency Contact Name</td>
+                        <td>{{profile.userInfo.emergencyContactName}} </td>
+                      </tr>
+                       <tr>
+                        <td>Emergency Contact Number</td>
+                        <td>{{profile.userInfo.emergencyContactNumber}} </td>
+                      </tr>              
+             
+                     
+                    </tbody>
+                  </table>
+                  
+
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div> <!-- /row -->
+      </div> <!-- / container -->
+
+
+    <!-- Profile Edit Modal -->
+    <div class="modal" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Birchwood Estates West</h4>
+          </div>
+          <div class="modal-body" style="padding-top:0; padding-bottom:0;">
+        
+        <pre>
+        {{userEmail | json}}
+        {{residentName1 | json}}
+        </pre>
+    <!-- <div class="container"> -->
+        <div class="row">
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Lot #:</td>
+                        <td>  <input type="text" class="form-control" id="profile.userInfo.lotNumber" placeholder={{profile.userInfo.lotNumber}}></td>
+                      </tr>
+                      <tr>
+                        <td>Move in date:</td>
+                        <td><input type="text" class="form-control" id="profile.userInfo.moveInDate" placeholder={{profile.userInfo.moveInDate}}></td>
+                      </tr>
+                      <tr>
+                        <td>Resident Names:</td>
+                          <td>
+                          <input type="text" class="form-control" id="profile.userInfo.resident1Name" placeholder={{profile.userInfo.resident1Name}} ng-model="resident1Name"><br>
+                          <input type="text" class="form-control" id="profile.userInfo.resident2Name" placeholder={{profile.userInfo.resident2Name}}><br>
+                          <input type="text" class="form-control" id="profile.userInfo.resident3Name" placeholder={{profile.userInfo.resident3Name}}>
+                          </td>
+                      </tr>
+
+                      <tr>
+                        <td>Phone Number</td>
+                        <td><input type="text" class="form-control" id="exampleInputEmail1" placeholder="text"> </td>
+                      </tr>  
+                      <tr>
+                        <td>Email</td>
+                        <td><input type="text" class="form-control" id="userEmail" placeholder="text" ng-model="userEmail"> </td>
+                      </tr>                      
+                      <tr>
+                        <td>Secondary Address</td>
+                        <td><input type="text" class="form-control" id="secondaryAddress" placeholder="text"> </td>
+                      </tr>
+                    
+                      <tr>
+                        <td>Emergency Contact Name</td>
+                        <td><input type="text" class="form-control" id="exampleInputEmail1" placeholder="text"> </td>
+                      </tr>
+                       <tr>
+                        <td>Emergency Contact Number</td>
+                        <td><input type="text" class="form-control" id="exampleInputEmail1" placeholder="text"> </td>
+                      </tr>              
+             
+                     
+                    </tbody>
+                  </table>
+                    sadlfjsadlkfjflksd
+                  <button class="btn btn-default" type="submit" ng-click="sendUpdatedUserInfo()">Update</button>
+
+                </div>
+        </div>
+    <!-- </div> -->
+
+
+
+
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+ 

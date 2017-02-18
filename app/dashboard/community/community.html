@@ -1,0 +1,175 @@
+
+
+
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">my postings</h3>
+              </div>
+          <div class="panel-body">
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>post date</th>
+                    <th>title</th>
+                    <th>post type</th>
+                    <th>description</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr ng-repeat="(key, value) in userDashboardData.postings" >
+                    <td>{{value.date}}</td>
+                    <td>{{value.title}}</td>
+                    <td>{{value.type}}</td>
+                    <td>{{value.description}}</td>
+                </tr>
+                </tbody>
+              </table>
+
+          </div>
+   </div>
+
+
+<!-- Community Bulletin Board -->
+
+    <div class="panel panel-default">
+       <div class="panel-heading">
+          <div class="row">
+              <div class=" col-md-7 col-ld-7">
+                <h3 class="panel-title" style="padding-top:4px;">Community Postings </h3>
+              </div>
+              <div class="col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
+	              <a data-toggle="modal" data-target="#myModal">Add Post</a>
+              </div>
+          </div>
+
+        </div>
+        
+        <div class="panel-body">
+
+
+        <!-- Recent Postings -->        
+       
+            <div class="form-group searchPostingField"> <!--has-feedback--> 
+              <input ng-model="searchPostings" type="text" class="form-control" id="inputSuccess2" placeholder="search">
+              <span class="glyphicon glyphicon-search form-control-feedback" style="padding-top:1px;"></span>
+            </div>
+
+           <table class="table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                  <th>Date Posted</th>
+
+              </tr>
+              </thead>
+              <tbody>
+        <!-- <pre>
+            {{postings | json}}
+        </pre> -->
+
+              <tr ng-repeat="(key, value) in postings | toArray:true | filter:searchPostings">
+                  <td>{{value.name}}</td>
+                  <td>{{value.postType}}</td>
+                  <td>{{value.description}}</td>
+                  <td>{{value.date}}</td>
+                  <td> <button type="button" data-toggle="modal" data-target="#replyToPostModal">reply</button></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>  
+      </div>
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add New Posting</h4>
+      </div>
+      <div class="modal-body">
+        <pre>
+          {{postingItem | json}}
+        </pre>
+		<form class="form-horizontal">
+		  <div class="form-group">
+
+		   	<div class="row">
+			    <label for="itemName" class="col-sm-3 control-label">Name</label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" id="itemName" ng-model="postingItem.name" placeholder="item">
+			    </div>
+		   	</div>
+
+ 			<div class="row">
+			    <label for="itemType" class="col-sm-3 control-label">Post Type</label>
+			   	<div class="col-sm-8">
+	  					<input id="forSale" type="checkbox" name="field" value="forSale" ng-model="postingItem.postType.forSale" ng-true-value="'true'" ng-false-value="false">
+	  					<label for="forSale">For Sale</label>
+
+	  					<input id="helpNeeded" type="checkbox" name="field" value="helpNeeded" ng-model="postingItem.postType.helpNeeded" ng-true-value="'true'" ng-false-value="false">
+	  					<label for="helpNeeded">Help Needed/Offered</label>
+
+<br>
+	  					<input id="social" type="checkbox" name="field" value="social" ng-model="postingItem.postType.social" ng-true-value="'true'" ng-false-value="false">
+	  					<label for="social">Social/Meet-Up</label>
+
+	  					<input id="recommendations" type="checkbox" name="field" value="recommendations" ng-model="postingItem.postType.recommendations" ng-true-value="'true'" ng-false-value="false"">
+	  					<label for="Recommendations">Recommendations</label>
+
+				</div>
+			</div>
+
+			<div class="row">
+			    <label for="description" class="col-sm-3 col-md-3 col-lg-3 control-label">Description</label>
+			    <div class="col-sm-8 col-md-8 col-lg-8">
+			      <input type="text" class="form-control" id="description" ng-model="postingItem.description" placeholder="description">
+			    </div>
+			</div>
+
+
+<!-- date  test-->
+
+    
+    <div class="row">
+
+      <label for="itemDesc" class="col-sm-3 col-lg-3 control-label">Date</label>
+
+      <div class="col-sm-8 col-md-8 col-lg-8 myCal">
+        <p class="input-group " >
+          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"/>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+
+		  </div>
+		
+		</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="postItem()" data-dismiss="modal">Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- reply to post modal -->
+
+
+<div class="modal" id="replyToPostModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>

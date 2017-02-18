@@ -1,0 +1,138 @@
+<!-- <pre>
+{{userDashboardData | json}}
+</pre> -->
+
+
+
+   <!--  <div class="container-fluid"> -->
+
+        <!-- Top Header-->
+
+        <div class="header" id="account-page-header">
+            <h1> Birchwood Estates West </h1>
+            <p>Welcome {{userDashboardData.userInfo.resident1Name}}!</p>
+        </div>
+        <!-- end top header -->
+
+
+        <!-- messages -->
+<div class="row">
+  
+  <div class="col-md-7 col-lg-7">
+        <div class="panel panel-default" id="messageSection">
+          <div class="panel-heading">
+            <h3 class="panel-title">Community Messages</h3>
+          </div>
+
+          <div class="panel-body">
+            <div ng-repeat="(key, value) in userDashboardData.messages"> 
+                                {{value}}
+            </div>
+          </div>
+        </div>
+  </div>
+
+  <!-- /messages -->
+
+  <!-- documents --> 
+    <div class="col-md-5 col-lg-5">
+      <div class="panel panel-default" id="documentsSection">
+        <div class="panel-heading">
+          <h3 class="panel-title">Documents</h3>
+        </div>
+        
+        <div class="panel-body">
+          <div class="container">
+
+              <div> <a class="btn-documents btn-default anchor-button" href="" download> Lease Agreement </a>
+              </div>
+
+              <div>
+                  <a class="btn-documents btn-default"> Community Rules </a>
+              </div>
+
+              <div>
+                  <a class="btn-documents btn-default"> Lawn/Snow Schedules </a>
+              </div>
+            
+              <div>
+                  <a class="btn-documents btn-default "> Service Providers </a>
+            
+              </div>
+          </div>
+        </div>
+      </div> <!-- /panel body -->
+    </div> <!-- / panel default -->
+
+</div>
+        <!-- /documents -->
+ 
+        <!-- Account -->
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Account</h3>
+          </div>
+
+
+          <div class="panel-body">
+
+        <!-- account status -->
+            <div class="container">
+            <h4> Account Status </h4>     <br>  
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-1">
+                        <i class="fa fa-dollar" style="font-size: 22pt;"></i> 
+                        <h5 style="display: inline-block"> Your current balance is {{globalBalance}} </h5>
+
+                        </div>
+
+                        <div class="col-md-3">
+                        <button class="btn-danger btn-md"> Make a Payment</button>
+                        </div>
+                    </div>
+            </div>
+            <br> <br>
+
+
+    <!-- payment history -->        
+          <div  class="container" style="width:100%">
+
+            <h4>Payment History</h4>
+            <p>The following table reflects your payment history. Please note it can take 3-5 Business days for your payment to be reflected in the system</p>
+             <table class="table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Charge</th>
+                    <th>Paid</th>
+                    <th>Balance</th>
+                    
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="(key, value) in userDashboardData.accountActivity | orderBy: 'date'">
+                    <td>{{value.date}}</td>
+                    <td>{{value.description}}</td>
+                    <td>{{value.amountDue}}</td>
+                    <td>{{value.amountPaid}}</td> 
+                    <td>{{value.currentBalance}}</td>
+                </tr>
+                </tbody>
+              </table>
+
+
+            </div>  <!-- End #PaymentHistory-->
+         </div> <!-- end account panel body -->
+        </div> <!-- end account panel -->
+
+
+
+
+  
+
+
+
+
+

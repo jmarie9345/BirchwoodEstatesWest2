@@ -1,0 +1,72 @@
+
+
+
+/*.btn-info {
+
+	height:100px;
+	width:200px;
+	vertical-align: top;
+
+}*/
+
+.btn-documents {
+
+	height:50px;
+	width:150px;
+	vertical-align: top;
+	margin:10px;
+	text-align: center;
+	white-space: normal;
+
+}
+
+
+.fa-dollar {
+    color:green;  
+    display: inline-block;
+    padding-right: 10px;
+
+}
+
+.page-header {
+	margin: 0px;
+	padding:0px 10px 0px 10px;
+}
+
+.container{
+	width:100%;
+}
+
+.container-fluid {
+	margin: 0px;
+	padding:0px 10px 0px 10px;
+	overflow:hidden;
+}
+
+#page-content-wrapper{
+
+	margin: 0px;
+	padding:0px 10px 0px 10px;
+
+}
+
+.panel {
+
+	margin: 0px;
+	padding:0px;
+	
+}
+
+
+
+/* Profile */
+
+#profileImage{
+	height: 160px;
+	width:160px;
+	border:solid;
+}
+
+
+/* search */
+

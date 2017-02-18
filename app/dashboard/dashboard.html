@@ -1,0 +1,47 @@
+ <div id="wrapper">
+                       
+
+
+<!-- Sidebar Navigation -->
+<div id="sidebar-wrapper">
+           
+    <ul class="sidebar-nav">
+    <li>
+        <div align="center" class="profilePicSmall"> 
+            <img alt="User Pic" ng-src="{{avatarURL}}" class="img-circle-thumbnail img-responsive">
+            <p> {{resident1Name}}</p>
+        </div>
+    </li>
+        <li>
+            <a ui-sref="dashboard.account">Account</a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.profile" >Profile</a>
+        </li>
+        <li>
+            <a ui-sref="dashboard.community">Community Postings</a>
+        </li>
+         <li>
+            <a ng-click="logOut()">log out</a>
+        </li>
+
+    </ul>
+</div>
+<!-- /#sidebar-wrapper -->
+
+
+
+
+<!-- Page Content -->
+<div id="page-content-wrapper">
+
+        <div ui-view></div>
+
+</div>
+    <!-- /#wrapper -->
+</div>
+
+
+
+
+
