@@ -42,7 +42,7 @@
    		function init() {
 
    			setupGoogleMaps();
-   			
+
 	    	//Initialize Google Maps
 	        $scope.map = { 
 	        	center: { 
@@ -89,8 +89,8 @@
                  position: new google.maps.LatLng(43.033980, -82.464194),
                  map: map,
 	      	});
-	   }
 	   	}
+	   	
  		function signIn(){
 			
 			firebase.auth().signInWithEmailAndPassword("jmarie9345@gmail.com", "Welcome01")
