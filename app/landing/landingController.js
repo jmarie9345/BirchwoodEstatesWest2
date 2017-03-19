@@ -35,7 +35,10 @@
 		*********************************/
    		$scope.sendEmail = sendEmail;
    		$scope.goToTop = goToTop;
+   		$scope.goToAboutUs = goToAboutUs;
    		$scope.goToLocation = goToLocation;
+   		$scope.goToProperties = goToProperties;
+   		$scope.goToContactUs = goToContactUs;
    		$scope.resizeModal - resizeModal;
 
    		init()
@@ -174,14 +177,25 @@
 		$anchorScroll();
       }    
 
-      function goToLocation() {
-		$location.hash('location');
+      function goToAboutUs() {
+		$location.hash('aboutUsSummary');
 		$anchorScroll();
       }   
 
+      function goToLocation() {
+		$location.hash('location');
+		$anchorScroll();
+      }  
 
+	  function goToProperties() {
+		$location.hash('availableProperties');
+		$anchorScroll();
+      }   
 
-
+ 	  function goToContactUs() {
+		$location.hash('contactUs');
+		$anchorScroll();
+      } 
 
 
 
