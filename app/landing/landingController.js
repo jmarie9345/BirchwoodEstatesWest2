@@ -176,7 +176,7 @@
 
       function goToLocation() {
 		$location.hash('location');
-		// $anchorScroll();
+		$anchorScroll();
       }   
 
 
