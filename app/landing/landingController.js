@@ -35,6 +35,7 @@
 		*********************************/
    		$scope.sendEmail = sendEmail;
    		$scope.goToTop = goToTop;
+   		$scope.goToLocation = goToLocation;
    		$scope.resizeModal - resizeModal;
 
    		init()
@@ -173,13 +174,16 @@
 		$anchorScroll();
       }    
 
+      function goToLocation() {
+		$location.hash('location');
+		$anchorScroll();
+      }   
 
 
 
 
 
 
-      
 
       function resizeModal() {
 
