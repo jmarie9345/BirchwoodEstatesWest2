@@ -173,6 +173,14 @@
 		$anchorScroll();
       }    
 
+
+
+
+
+
+
+      
+
       function resizeModal() {
 
       	$('.property1Modal').on('shown',function(){
