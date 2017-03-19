@@ -891,3 +891,27 @@
 	padding-left:20%;
 }
 
+
+@media  (max-width: 640px) {
+
+	#home-carousel  .item {
+		width:100%;
+		height: 600px;
+	}
+
+	#aboutUsParagraph {
+		text-align: center;
+	}
+
+	#googleMap {
+		margin-left: 0px;
+		margin-right: 0px;
+		display: inline-block;
+
+	}
+
+	.propertyPrimeDetails{
+		text-align: center;
+	}
+
+}
