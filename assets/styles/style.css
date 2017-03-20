@@ -172,8 +172,7 @@
 	.st-navbar ul li a{
 		text-transform: uppercase;
 		padding: 0;
-		margin: 14px;
-
+		/*margin: 14px;*/
 		color: #333333;
 
 	}
@@ -528,6 +527,8 @@
 	#contactUs{
 
 		padding-bottom:10px;
+		width:90%;
+		border:dashed;
 	}
 	
 	#contactUs h1{
