@@ -517,12 +517,12 @@
                 <form id="myform" class="contact-form" >
                     <label>Contact Name</label>
                     <input type="text" name="contactName" ng-model="contactUsForm.contactName"/>
-                    <label>Message</label>
-                    <input type="text" name="message_html" ng-model="contactUsForm.contactMessageBody"/>
                     <label>Phone</label>
                     <input type="text" name="contactPhone" ng-model="contactUsForm.contactPhone"/>
                     <label>Contact Email</label>
                     <input type="text" name="contactEmail" ng-model="contactUsForm.contactEmail"/>
+                    <label>Message</label>
+                    <input type="text" name="message_html" ng-model="contactUsForm.contactMessageBody"/>
                     <br><br>
                     <button  ng-click="sendEmail()" class="btn btn-send"> Submit </button>
                 </form>
