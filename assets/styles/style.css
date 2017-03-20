@@ -222,8 +222,6 @@
 		background-size:cover;
 		width:100%;
 		height: 750px;
-	
-
 	}
 
 	.carousel-inner{/*
@@ -656,13 +654,18 @@
 	#contactInfo p{
 		font-size: 14px;
 	}
+
+	#home-carousel  .item {
+		width:100%;
+		height: 600px;
+	}
+
+
 }
 
 
 
 @media (max-width: 999px) {
-
-
 
 	.companyNameHeading {
 		font-size:25px;
@@ -817,6 +820,11 @@
 
 	.st-navbar .navbar-collapse ul {
 		float: initial !important;
+	}
+
+	#home-carousel  .item {
+		width:100%;
+		height: 400px;
 	}
 
 }
