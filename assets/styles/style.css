@@ -655,11 +655,6 @@
 		font-size: 14px;
 	}
 
-	#home-carousel  .item {
-		width:100%;
-		height: 600px;
-	}
-
 
 }
 
@@ -742,6 +737,11 @@
 	}
 
 
+	#home-carousel  .item {
+		width:100%;
+		height: 400px;
+	}
+
 }
 
 @media (max-width:1000px) {
@@ -822,10 +822,7 @@
 		float: initial !important;
 	}
 
-	#home-carousel  .item {
-		width:100%;
-		height: 400px;
-	}
+
 
 }
 
@@ -843,6 +840,11 @@
 		max-height:300px;
 		min-height:300px;
 		
+	}
+
+		#home-carousel  .item {
+		width:100%;
+		height: 200px;
 	}
 
 }
@@ -904,7 +906,7 @@
 
 	#home-carousel  .item {
 		width:100%;
-		height: 600px;
+		height: 400px;
 	}
 
 	#aboutUsParagraph {
