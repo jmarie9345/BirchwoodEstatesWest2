@@ -151,6 +151,11 @@
 
 	}
 
+	.navbar-nav li{
+		padding-left: 10px;
+
+	}
+
 	#landingNavigationBar{
 
 		height:75px;
@@ -329,7 +334,9 @@
 }
 
 /* 7. AVAILABLE PROPERTIES- */
-
+ .propertySatus {
+ 	color: red;
+ }
 	#availableProperties{
 		margin-top:20px;
 		padding-bottom:25px;
